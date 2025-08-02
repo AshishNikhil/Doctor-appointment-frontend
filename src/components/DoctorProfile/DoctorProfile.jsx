@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import axios from "axios";
-import { DNA } from "react-loader-spinner";
+import { BounceLoader } from 'react-spinners';
 import AppointmentModal from "../AppointmentModal/AppointmentModal";
 import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
@@ -23,12 +23,7 @@ const DoctorProfile = () => {
 
   const renderLoadingView = () => (
     <div className="flex justify-center items-center h-screen">
-      <DNA
-        visible={true}
-        height="80"
-        width="80"
-        ariaLabel="dna-loading"
-        wrapperClass="dna-wrapper"
+      <BounceLoader color="#4F46E5"
       />
     </div>
   );
